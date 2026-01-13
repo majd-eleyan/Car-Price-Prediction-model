@@ -7,7 +7,7 @@ import numpy as np
 st.set_page_config(page_title="Car Price Predictor", page_icon="🚗", layout="centered")
 
 
-random_forest_regressor_model = joblib.load(r"C:\Users\Tamer\Desktop\ML\car price predict\random_forest_regressor_model.joblib")
+random_forest_regressor_model = joblib.load("random_forest_regressor_model.joblib")
 label_encoders_dict = joblib.load("label_encoders.joblib")
 median_imputation_values = joblib.load("median_imputation_values.joblib")
 feature_names = joblib.load("feature_names.joblib")
@@ -108,3 +108,4 @@ if st.button("Predict Car Price", use_container_width=True):
 
     st.success(f"💰 Estimated Car Price: **${usd_price:,.2f}**")
     st.metric("Price in USD", f"${usd_price:,.2f}")
+
